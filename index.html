@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Perfil Profesor</title>
+  </head>
+  <body>
+    <header><h1>SECTOR ENTRENADORES</h1></header>
+    <main>
+      <div>
+        <button onclick="agregarEntrenador()">Crear usuario Entrenador</button>
+      </div>
+      <section class="panel_profesor">
+        <div class="div_entrenador">
+          <h2>Entrenador:</h2>
+
+          <h3 id="nombreEntrenador"></h3>
+        </div>
+        <button onclick="mostrarAlumnos()">Alumnos</button>
+        <button onclick="agregarAlumno()">Agregar Alumno</button>
+        <button onclick="quitarAlumno()">Quitar Alumno</button>
+      </section>
+      <section class="panel_alumno">
+        <h3>Alumno:</h3>
+        <div>
+          <select name="alumnos" id="alumnos">
+            <!--  <option value="">Lorem, ipsum.</option> -->
+            <!-- <option value="">Lorem, ipsum.</option> -->
+            <!-- <option value="">Lorem, ipsum.</option>
+            <option value="">Lorem, ipsum.</option>
+            <option value="">Lorem, ipsum.</option>
+            <option value="">Lorem, ipsum.</option> -->
+          </select>
+        </div>
+        <button onclick="crearRutina()">Crear rutina</button>
+      </section>
+      <section id="armado_rutina">
+        <h3>RUTINA</h3>
+        <div class="div_dias">
+          <select name="" id="">
+            <option value="">DIA 1</option>
+            <option value="">DIA 2</option>
+            <option value="">DIA 3</option>
+            <option value="">DIA 4</option>
+            <option value="">DIA 5</option>
+            <option value="">DIA 6</option>
+            <option value="">DIA 7</option></select
+          ><button>Agregar día</button>
+          <button>Quitar día</button>
+        </div>
+
+        <div>
+          <div class="div_ejercicio">
+            <img
+              class="img_camara"
+              src="./images/video-camera-svgrepo-com.svg"
+              alt=""
+            />
+          </div>
+          <div class="botones_rutina">
+            <button onclick="agregarEjercicio()">Agregar Ejercicio</button>
+            <button onclick="mostrarEjercicios()">Ver ejercicios</button>
+            <button>Quitar Ejercicio</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/js.js"></script>
+  </body>
+</html>
