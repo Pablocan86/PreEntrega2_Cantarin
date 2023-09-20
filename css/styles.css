@@ -80,7 +80,11 @@ main {
   flex-direction: column;
   align-items: center;
 }
-
+.ejercicios_agregar {
+  border: 2px solid red;
+  padding: 10px;
+  margin: 20px;
+}
 .panel_alumno {
   border: 5px double rgb(187, 10, 10);
   border-radius: 5px;
@@ -96,8 +100,6 @@ main {
   background-color: black;
 }
 #armado_rutina {
-  border: 5px double rgb(187, 10, 10);
-  border-radius: 5px;
   padding: 10px;
 }
 
@@ -112,11 +114,12 @@ main {
   justify-content: space-around;
   padding: 10px 0px;
 }
-.div_ejercicio {
+#div_ejercicio {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 }
 .btn_ejercicio {
   background-color: red;

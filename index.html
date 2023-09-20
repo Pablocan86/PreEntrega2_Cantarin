@@ -10,7 +10,8 @@
     <header><h1>SECTOR ENTRENADORES</h1></header>
     <main>
       <div>
-        <button onclick="agregarEntrenador()">Crear usuario Entrenador</button>
+        <button onclick="agregarEntrenador()">Ingresar Entrenador</button>
+        <button onclick="verEntrenadores()">Ver Entrenadores</button>
       </div>
       <section class="panel_profesor">
         <div class="div_entrenador">
@@ -25,17 +26,11 @@
       <section class="panel_alumno">
         <h3>Alumno:</h3>
         <div>
-          <select name="alumnos" id="alumnos">
-            <!--  <option value="">Lorem, ipsum.</option> -->
-            <!-- <option value="">Lorem, ipsum.</option> -->
-            <!-- <option value="">Lorem, ipsum.</option>
-            <option value="">Lorem, ipsum.</option>
-            <option value="">Lorem, ipsum.</option>
-            <option value="">Lorem, ipsum.</option> -->
-          </select>
+          <select name="alumnos" id="alumnos"></select>
         </div>
-        <button onclick="crearRutina()">Crear rutina</button>
+        <button onclick="crearRutina()">Crear rutina <span> "La idea es que despliegue lo que sigue abajo"</span> </button>
       </section>
+
       <section id="armado_rutina">
         <h3>RUTINA</h3>
         <div class="div_dias">
@@ -50,24 +45,23 @@
           ><button>Agregar día</button>
           <button>Quitar día</button>
         </div>
-
-        <div>
-          <div class="div_ejercicio">
-            <img
-              class="img_camara"
-              src="./images/video-camera-svgrepo-com.svg"
-              alt=""
-            />
-          </div>
-          <div class="botones_rutina">
-            <button onclick="agregarEjercicio()">Agregar Ejercicio</button>
-            <button onclick="mostrarEjercicios()">Ver ejercicios</button>
-            <button>Quitar Ejercicio</button>
-          </div>
-        </div>
       </section>
+      <div id="div_ejercicio">
+        <!-- <img
+            class="img_camara"
+            src="./images/video-camera-svgrepo-com.svg"
+            alt=""
+          /> -->
+        </div>
+        
+        <div class="botones_rutina">
+          <button onclick="agregarEjercicio()">Agregar Ejercicio</button>
+          <button onclick="mostrarEjerciciosDeRutina()">Ver ejercicios</button>
+          <button onclick="quitarejercicio()">Quitar Ejercicio</button>
+        </div>
+      </div>
     </main>
 
-    <script src="./js/js.js"></script>
+    <script src="./js/rutinas.js"></script>
   </body>
 </html>
