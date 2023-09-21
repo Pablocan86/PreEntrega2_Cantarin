@@ -17,7 +17,10 @@ body {
     url(../images/fondo_de_pantalla.jpg);
   background-size: cover;
 }
-
+a {
+  text-decoration: none;
+  color: white;
+}
 button {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;

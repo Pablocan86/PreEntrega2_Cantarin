@@ -4,8 +4,8 @@ const entrenadores = [];
 let usuario = document.querySelector("#nombreEntrenador");
 
 function agregarEntrenador() {
-  const nombreEntrenador = prompt("Nombre entrenador: ");
-  const apellidoEntrenador = prompt("Apellido entrenador: ");
+  const nombreEntrenador = prompt("Nombre entrenador: ").toUpperCase();
+  const apellidoEntrenador = prompt("Apellido entrenador: ").toUpperCase();
 
   const nuevoEntrenador = {
     nombre: nombreEntrenador,
@@ -28,8 +28,8 @@ const alumnos = [];
 const alumnoLista = document.querySelector("#alumnos");
 //Funcion agregar alumnos
 function agregarAlumno() {
-  const nombre = prompt("Ingrese nombre del alumno:");
-  const apellido = prompt("Ingrese apellido del alumno: ");
+  const nombre = prompt("Ingrese nombre del alumno:").toLocaleUpperCase();
+  const apellido = prompt("Ingrese apellido del alumno: ").toLocaleUpperCase();
   const inicio = new Date();
 
   const nuevoAlumno = {
@@ -46,7 +46,6 @@ function agregarAlumno() {
 //Función para ver alumnos en la consola
 function mostrarAlumnos() {
   console.log(alumnos);
-  console.clear();
   // console.log("Alumnos:");
   for (const alumno of alumnos) {
     console.log("Nombre:", alumno.nombre);
@@ -56,8 +55,8 @@ function mostrarAlumnos() {
 }
 //Función para quitar alumnos (no se eliminan de la lista del select porque no se como hacerlo)
 function quitarAlumno() {
-  const nombreAlumno = prompt("Nombre de alumno: ");
-  const apellidoAlumno = prompt("Apellido del alumno: ");
+  const nombreAlumno = prompt("Nombre de alumno: ").toUpperCase();
+  const apellidoAlumno = prompt("Apellido del alumno: ").toUpperCase();
   for (const alumno of alumnos) {
     if (alumno.nombre == nombreAlumno && alumno.apellido == apellidoAlumno) {
       //Buscar indice a través de indeOf
@@ -132,8 +131,7 @@ const listaEjercicios = document.querySelector("#div_ejercicio");
 function agregarEjercicio() {
   const nombreEjercicio = prompt(
     "Ingrese ejercicio de la lista de ejercicios en mayúscula: "
-  );
-
+  ).toUpperCase();
   for (const ejercicio of ejercicios) {
     if (ejercicio.nombre == nombreEjercicio) {
       const resultadoEjercicio = ejercicios.find((el) =>
@@ -145,9 +143,15 @@ function agregarEjercicio() {
       const descanso = prompt("Ingrese descando entre series (tiempo): ");
       rutina.push(ejercicio);
       const nuevoEjercicio = document.createElement("div");
-      nuevoEjercicio.innerHTML = `Ejercicio: ${ejercicio.nombre} // Series y Repeticiones: ${seriesYRepeticiones} =======> Descanso entre series:  ${descanso}`;
+      nuevoEjercicio.innerHTML = `<span> - Ejercicio:${ejercicio.nombre}</span> <span> - Series y Repeticiones: ${seriesYRepeticiones}</span> <span> - Descanso entre series:  ${descanso}</span> <button><a href="${ejercicio.video}" target="_blank">VER VIDEO</a></button>`;
       listaEjercicios.append(nuevoEjercicio);
     }
+    // // if (ejercicio.nombre == nombreEjercicio) {
+    //   const nuevoEjercicio = document.createElement("button");
+    //   nuevoEjercicio.innerHTML = ``;
+    //   listaEjercicios.append(nuevoEjercicio);
+    //   console.log(ejercicio.video);
+    // }
   }
 }
 
@@ -159,7 +163,7 @@ function mostrarEjerciciosDeRutina() {
 function quitarejercicio() {
   const nombreEjercicio = prompt(
     "Ingrese ejercicio de la lista de ejercicios en mayúscula: "
-  );
+  ).toUpperCase();
   for (const ejercicio of rutina) {
     if (ejercicio.nombre == nombreEjercicio) {
       //Buscar indice a través de indeOf
