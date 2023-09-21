@@ -86,7 +86,7 @@ class Ejercicio {
     this.video = video;
   }
 }
-
+//La idea es generar una base de datos con todos los ejercicios y que se puedan agregar buscandolos o desde un desplegable
 const aperturaInclinada = new Ejercicio(
   "APERTURA INCLINADA",
   "PECTORALES",
@@ -142,16 +142,11 @@ function agregarEjercicio() {
       );
       const descanso = prompt("Ingrese descando entre series (tiempo): ");
       rutina.push(ejercicio);
+      //Hacemos que se visualicen los ejercicios y el video del mismo en la pantalla
       const nuevoEjercicio = document.createElement("div");
       nuevoEjercicio.innerHTML = `<span> - Ejercicio:${ejercicio.nombre}</span> <span> - Series y Repeticiones: ${seriesYRepeticiones}</span> <span> - Descanso entre series:  ${descanso}</span> <button><a href="${ejercicio.video}" target="_blank">VER VIDEO</a></button>`;
       listaEjercicios.append(nuevoEjercicio);
     }
-    // // if (ejercicio.nombre == nombreEjercicio) {
-    //   const nuevoEjercicio = document.createElement("button");
-    //   nuevoEjercicio.innerHTML = ``;
-    //   listaEjercicios.append(nuevoEjercicio);
-    //   console.log(ejercicio.video);
-    // }
   }
 }
 
